@@ -1,29 +1,110 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Timm Michaud - JSD2</title>
+	<title>JSD2: JavaScript Development 📕 Instructor: Timm Michaud</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/jsd.css">
 </head>
 <body>
 
-<h1>Timm Michaud</h1>
+<header>
+	<h1>JSD2: JavaScript Development</h1>
+</header>
 
-<h2>Favorite Ice Cream Spots</h2>
-<ol>
-	<li>Smitten</li>
-	<li>Bi-Rite</li>
-	<li>Humphry Slocombe</li>
-</ol>
+<main>
 
-<h2>Social Network Profiles</h2>
-<ul>
-	<li><a href="https://www.linkedin.com/in/timmmichaud"></a>LinkedIn</li>
-</ul>
+	<section>
+		<h2>Curriculum</h2>
 
-<h2>Homework assignments</h2>
-<ul>
-	<li><a href="homework/assignment1.html">Homework 1</a></li>	
-</ul>
+		<div class="curriculum">
 
+			<div class="unit unit-1">
+				<h3>Unit 1: JavaScript Fundamentals</h3>
+				<ol class="lessons">
+					<li>01 - Introductions & Git</li>
+					<li>02 - Functions and Variables</li>
+					<li>03 - Data types</li>
+					<li>04 - Arrays & Loops</li>
+					<li>05 - Conditions & Callbacks</li>
+				</ol>
+			</div>
+
+			<div class="unit unit-2">
+				<h3>Unit 2: The DOM and the Browser</h3>
+				<ol class="lessons">
+					<li>06 - Window and Document</li>
+					<li>07 - DOM Tree - Creating Elements</li>
+					<li>08 - Event & Event Listeners</li>
+					<li>09 - AJAX</li>
+					<li>10 - Front-End Templating</li>
+				</ol>
+			</div>
+
+			<div class="unit unit-3">
+				<h3>Unit 3: JSON and Data Models</h3>
+				<ol class="lessons">
+					<li>11 - JSON</li>
+					<li>12 - LocalStorage</li>
+					<li>13 - Cloud-hosted JSON database</li>
+					<li>14 - API's</li>
+					<li>15 - Moar API's</li>
+				</ol>
+			</div>
+
+			<div class="unit unit-4">
+				<h3>Unit 4: Building and Deploying Your App</h3>
+				<ol class="lessons">
+					<li>16 - Assembling JS Frameworks</li>
+					<li>17 - JS Frameworks: React</li>
+					<li>18 - Deploying to Heroku</li>
+					<li>19 - Lab time: final project</li>
+					<li>20 - Final Project Presentations</li>
+				</ol>
+			</div>
+		</div>
+
+	</section>
+
+	<section>
+		<h2><a href="students.html">Student Directory</a></h2>
+	</section>
+
+	<section>
+		<h2><a href="homework.html">Homework</a></h2>
+	</section>
+
+
+</main>
+
+<footer>
+	<section class="two-column">
+
+		<div class="team">
+			<h2>var instructionalTeam = {</h2>
+			<ul>
+				<li>instructor: <a href="mailto:timmmichaud@gmail.com">'Timm'</a>,</li>
+				<li>ta: <a href="mailto:sandima.job@gmail.com">'Sandi'</a>,</li>
+				<li>producer: <a href="mailto:evan@ga.co">'Evan'</a></li>
+			</ul>
+			<p class="h2">};</p>
+
+		</div>
+
+		<div class="exit-tickets">
+			<h2>Exit Tickets</h2>
+			<p>At the end of each class, please take 3-4 minutes to fill out this <a href="http://goo.gl/forms/ISsZuzR0pbTafxVG2">Exit Ticket</a>. Filling this out helps your instructional team and GA create a more effective learning experience for you.</p>
+		</div>
+
+	</section>
+</footer>
+
+<script>
+window.addEventListener('load', function() {
+	jsd.track('view_homepage');
+});
+</script>
+<script src="js/jsd.js"></script>
 </body>
 </html>
-

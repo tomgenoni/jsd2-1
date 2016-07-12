@@ -1,0 +1,164 @@
+@import url("fonts.css");
+@import url("reset.css");
+
+
+/* Typography */
+/* ---------------------------------- */
+body {
+	font-family: "AvenirNext-Medium", sans-serif;
+	font-size: 12px;
+	line-height: 1.6;
+}
+h1, 
+h2,
+h3 {
+	font-family: "noto_serifregular", Serif;
+	letter-spacing: 1.6px;
+}
+h1 {
+	font-size: 24px;
+}
+h2,
+.h2 {
+	font-size: 21px;
+	line-height: 30px;
+}
+h3,
+.h3 {
+	font-size: 15px;
+	line-height: 21px;
+}
+
+
+/* Layout */
+/* ---------------------------------- */
+a {
+	color: #C24B18;
+	text-decoration: none;
+}
+a:hover {
+	color: #E06C3B;
+	text-decoration: underline;
+}
+
+
+/* Layout */
+/* ---------------------------------- */
+html,
+body {
+	height: 100%;
+}
+body {
+	background: #333333;
+}
+
+
+/* Grid */
+/* ---------------------------------- */
+section:not(.two-column) {
+	padding: 16px;
+}
+.two-column {
+	display: flex;
+}
+.two-column > div {
+	flex: 1;
+	padding: 16px;
+}
+.two-column > div:first-child {
+	padding-right: 8px;
+}
+.two-column > div:last-child {
+	padding-left: 8px;
+}
+
+
+/* Header */
+/* ---------------------------------- */
+header {
+	padding: 6px 12px;
+	background: #AF1642;
+	color: #FFFFFF;
+}
+header a {
+	color: #F99368;
+	text-decoration: none;
+}
+header a:hover {
+	color: #E06C3B;
+	text-decoration: underline;
+}
+
+
+/* Main */
+/* ---------------------------------- */
+main {
+	background: #FFFFFF;
+	color: #000000;
+}
+
+
+/* Footer */
+/* ---------------------------------- */
+footer {
+	background: #333333;
+	color: rgba(255,255,255,0.5);
+}
+footer a {
+    text-decoration: none;
+    color: rgba(255,255,255,0.8);	
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* Curriculum */
+/* ---------------------------------- */
+.curriculum {
+	display: flex;
+	margin-top: 12px;
+}
+.curriculum .unit {
+	width: 25%;
+}
+.curriculum .unit:not(:first-child):not(:last-child) {
+	padding: 0 12px;
+}
+.curriculum .lessons {
+	margin-top: 3px;
+}
+
+
+/* Footer - team */
+/* ---------------------------------- */
+.team li {
+	margin-left: 24px;
+}
+
+
+/* Student home pages */
+/* ---------------------------------- */
+.student-pages {
+	background: #E05D82;
+	margin: 50px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.student-pages > div {
+	flex-basis: 50%;
+	height: 300px;
+}
+@media (max-width: 700px) {
+	.student-pages > div {
+		flex-basis: 100%;
+		height: 400px;
+	}
+}
+.student-pages iframe {
+  border: 1px solid #246D5F;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  width: 200%;
+  height: 200%;
+}
