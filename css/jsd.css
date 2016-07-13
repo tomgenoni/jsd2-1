@@ -20,6 +20,7 @@ h1 {
 }
 h2,
 .h2 {
+	margin-top: 6px;
 	font-size: 18px;
 	line-height: 25px;
 }
@@ -30,7 +31,7 @@ h3,
 }
 
 
-/* Layout */
+/* Links */
 /* ---------------------------------- */
 a {
 	color: #C24B18;
@@ -193,4 +194,23 @@ footer a:hover {
 	transform-origin: 0 0;
 	width: 200%;
 	height: 200%;
+}
+
+
+/* Homework */
+/* ---------------------------------- */
+.homework {
+	width: 100%;
+	margin-top: 12px;
+}
+.homework tr:nth-child(even) {
+	background: #444444;
+}
+.homework th,
+.homework td {
+	padding: 4px 16px 4px 12px;
+	text-align: center;
+}
+.homework tr td:first-child {
+	text-align: left;
 }
