@@ -30,9 +30,9 @@ function generateStartup() {
 
 
 	// TODO: concatenate the fixed text with the two random values
-	// to create a new startup idea like:
-	// A startup that is Apple, but for Trello
-	startupIdea = '';
+	//       to create a new startup idea like:
+	//       "A startup that is Apple, but for Trello"
+	startupIdea = 'A startup that is , but for ';
 
 
 	// Update page with new startup idea
@@ -47,15 +47,19 @@ function saveFavorite() {
 }
 
 function printFavorites() {
+	var favoritesText;
 
 	// clear out favorites element
 	list.innerHTML = '';
 
-	// TODO: concatenate all the favorites in the array into one string
+	// TODO: concatenate all the favorites into one string
+	// - hint: loop through all the favorites
+	// - this should be stored in a variable named favoritesText
+	// - each favorite should have an html br element between it (EG: "<br>")
 
 
-	// update favorites with
-	list.innerHTML = text;
+	// update the list element with the new concatenated string
+	list.innerHTML = favoritesText;
 }
 
 

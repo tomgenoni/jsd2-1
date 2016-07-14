@@ -25,31 +25,31 @@
 		<h2>Due:</h2>
 		<p>Wednesday, 7/20/2016 @ 6:30pm</p>
 
-		<h2>Given</h2>
+		<h2>Overview</h2>
 		<p>Have you ever heard someone describe a startup as being “Like Uber for puppies” or “Like Amazon for kittens”? In this exercise, you’ll be building a website that auto-generates madlib sayings like “A startup that is X but for Y”. Here’s what we’ve given you to get started:</p>
 
+		<h2>Given</h2>
 		<ul>
-			<li>A JavaScript file (“madlib-console.js”) that contains two arrays (startupX and startupY) that are pre-populated with startup names (feel free to add some of your own as well!). The JavaScript file also contains two variables (random1 and random2) that will randomly select startup names from those arrays. Finally, at the bottom of the JavaScript file, there’s a line of code that will log “A startup that is X but for Y” out to the console.</li>
-			<li>An HTML file that contains a few elements you will want to use:</li>
-			<li>An h1 with an ID of XforY–this is where your finished madlib saying will go.</li>
-			<li>Buttons that are labeled “Create new startup,” “Favorite Startup” and “Print favorites”.</li>
-			<li>A CSS file, which contains some basic styling. You shouldn’t need to do anything with this file (unless you want to tweak the styling).</li>
+			<li>A zip file with a project template folder structure (download above).</li>
+			<li>HTML/CSS: All the HTML and CSS is done for you, this is a JS only exercise.</li>
+			<li>CSS: You shouldn’t need to do anything with the CSS (unless you want to tweak the styling).</li>
+			<li>DOM manipulation: it's also done for you as we haven't covered these topics yet in class (click events & updating html on the page).</li>
+
+			<li>A JavaScript file, "madlibs.js", that contains two arrays (startupX and startupY) that are pre-populated with startup names (feel free to add some of your own as well!).</li>
 		</ul>
 
 		<h2>Minimum Requirements</h2>
 
-		<p>Your job is to add code to the JavaScript file that makes the “Create new startup” button work. Basically, when the user clicks that buttons, your JavaScript should generate a new madlib saying, which should appear inside the XforY h1.</p>
+		<p>Your job is to add code to the JavaScript file that makes the “Generate New Startup” button work. Basically, when the user clicks that buttons, your JavaScript should generate a new madlib saying, which should appear inside the h1.</p>
 
-		<p>In order to complete this task, you will need to know a little bit about DOM manipulation. If this isn’t something you’ve covered yet in class, you may want to wait until you’ve covered DOM manipulation before you try to tackle this exercise. If, however, you’d like to get a head start, feel free to check out this tutorial, which should contain everything you need to get started.</p>
 
 		<h2>Stretch Goals</h2>
-
 		<p>Were you able to meet the minimum requirements for the exercise? Want an additional challenge? Here are two more features you can implement in your JavaScript:</p>
 
-		<ul>
+		<ol>
 			<li>Add functionality to make the “Favorite Startup” button work–when the “Favorite Startup” button is clicked, it should save that madlib saying to an array.</li>
-			<li>Add functionality to make the “Print favorites” button work–when the “Print favorites” button is clicked, it should display all of the favorited startups in the array underneath the h2 with an ID of favorites.</li>
-		</ul>
+			<li>Add functionality to make the “Print favorites” button work–when the “Print favorites” button is clicked, it should display all of the favorited startups in the array underneath the buttons in the paragraph element with the class of "list".</li>
+		</ol>
 
 	</section>		
 
@@ -60,5 +60,6 @@ window.addEventListener('load', function() {
 	jsd.track('view_homework_02_madlibs');
 });
 </script>
+<script src="../../js/jsd.js"></script>
 </body>
 </html>
