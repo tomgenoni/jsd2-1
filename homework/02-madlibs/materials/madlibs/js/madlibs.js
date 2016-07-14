@@ -1,41 +1,65 @@
-
+// Setup / Data
+// ------------------------------------------
 var startupX = ['Uber', 'Google', 'Amazon', 'Apple', 'Facebook', 'Twitter'];
 var startupY = ['Slack', 'Trello', 'Tesla', 'Hyperloop', 'Harvest'];
 var startupIdea;
 var favorites = [];
 
-createStartup()
 
-document.getElementById('create').onclick = createStartup;
-document.getElementById('save').onclick = save;
-document.getElementById('print').onclick = print;
+// Structure
+// ------------------------------------------
+var startup  = document.querySelector('.startup');
+var generate = document.querySelector('.generate');
+var save     = document.querySelector('.save');
+var print    = document.querySelector('.print');
+var list     = document.querySelector('.list');
 
-function createStartup(){
-  var random1 = Math.floor((Math.random() * startupX.length));
-  var random2 = Math.floor((Math.random() * startupY.length));
-  startupIdea = 'A startup that is ' + startupX[random1] + ', but for ' + startupY[random2];
-  document.getElementById('xForY').innerHTML = startupIdea;
+
+// Events
+// ------------------------------------------
+generate.addEventListener('click', generateStartup);
+save.addEventListener('click', saveFavorite);
+print.addEventListener('click', printFavorites);
+
+
+// Event Listeners
+// ------------------------------------------
+function generateStartup() {
+
+	// TODO: generate two random index numbers, one for each array
+
+
+	// TODO: concatenate the fixed text with the two random values
+	// to create a new startup idea like:
+	// A startup that is Apple, but for Trello
+	startupIdea = '';
+
+
+	// Update page with new startup idea
+	startup.innerHTML = startupIdea;
 }
-function save(){
-  favorites.push(startupIdea);
-  console.log(favorites);
-}
-function print(){
-  document.getElementById('favorites').innerHTML = '';
-  for(i=0;i<favorites.length;i++){
-    document.getElementById('favorites').innerHTML += favorites[i] + '<br />';
-  }
+
+function saveFavorite() {
+
+	// TODO: add the new idea to the array
+
+
 }
 
+function printFavorites() {
+
+	// clear out favorites element
+	list.innerHTML = '';
+
+	// TODO: concatenate all the favorites in the array into one string
 
 
+	// update favorites with
+	list.innerHTML = text;
+}
 
 
+// Init
+// ------------------------------------------
+generateStartup();
 
-// var startupX = ['Uber', 'Google', 'Amazon', 'Apple', 'Facebook', 'Twitter'];
-// var startupY = ['Slack', 'Trello', 'Tesla', 'Hyperloop', 'Harvest'];
-
-// var random1 = Math.floor((Math.random() * startupX.length));
-// var random2 = Math.floor((Math.random() * startupY.length));
-
-// console.log('A startup that is ' + startupX[random1] + ', but for ' + startupY[random2]);
