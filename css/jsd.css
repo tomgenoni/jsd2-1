@@ -214,3 +214,25 @@ footer a:hover {
 .homework tr td:first-child {
 	text-align: left;
 }
+
+
+/* Labs */
+/* ---------------------------------- */
+.labs {
+	padding: 30px;
+}
+.labs table {
+	font-size: 14px;
+	width: 100%;
+}
+.labs table thead tr {
+	border-bottom: 1px solid #DEDEDE;
+}
+.labs tr:nth-child(even) {
+	background: #EDEDED;
+}
+.labs table th,
+.labs table td {
+	padding: 3px 12px 3px 6px;
+}
+
