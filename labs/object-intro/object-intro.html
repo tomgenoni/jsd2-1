@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Object Intro</title>
+</head>
+<body>
+
+<h1>Object Intro</h1>
+
+<p>(Code-along is in the console)</p>
+
+<script>
+	
+var bus = {
+	route: "38R"
+};
+
+var car = {
+	"color": "green",
+	"make": "Ford",
+	"model": "Escape",
+	"ac": true,
+	"locked": true,
+	"unlock": function() {
+		this.locked = false;
+	}
+};
+
+var person = {
+	"firstName": "Will",
+	"lastName": "McLellarn",
+	"distance": 7.7,
+	"languages": [
+		"English",
+		"Spanish"
+	]
+};
+
+
+console.log("bus", bus);
+console.log("car", car);
+console.log("person", person);
+
+
+</script>
+
+</body>
+</html>

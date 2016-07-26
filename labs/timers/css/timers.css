@@ -1,0 +1,16 @@
+body {
+	background: #DEDEDE;
+	color: #787878;
+	font-size: 16px;
+	margin: 50px;
+	font-family: Arial, sans-serif;
+}
+li {
+	margin-left: 30px;
+	list-style-type: lower-roman;
+}
+h1,
+h2 {
+	margin-top: 20px;
+	font-family: "Copperplate-Bold", Arial, sans-serif;
+}

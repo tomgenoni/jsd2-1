@@ -28,7 +28,17 @@ function displayPrivilege(privilege) {
 
 
 
+
+
 // Determine the privilege to display
 // ------------------------------------------
 
 // TODO: write the getPrivilege function here
+
+function getPrivilege(age) {
+
+	var privilege = "you can drive";
+
+	return privilege;
+}
+
