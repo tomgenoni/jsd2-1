@@ -43,6 +43,21 @@ a:hover {
 }
 
 
+/* Lists */
+/* ---------------------------------- */
+ul {
+  list-style-type: none;
+}
+.bulleted > li {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+.numbered > li {
+  margin-left: 36px;
+  list-style-type: decimal;
+}
+
+
 /* Layout */
 /* ---------------------------------- */
 html,
