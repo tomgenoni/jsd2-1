@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Switch Statements - Topics - JSD2</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="../../css/jsd.css">
+	<link rel="shortcut icon" href="../../images/jsd-favicon.png">
+</head>
+<body>
+
+<header>
+	<h1><a href="../../index.html">JSD2</a>: <a href="../../topics.html">Topics</a>: Switch Statements</h1>
+</header>
+
+<main>
+
+	<section class="two-column">
+
+		<div>
+			<h1>Switch Statements</h1>
+
+			<h2>Notes</h2>
+			<ul class="bulleted">
+				<li>Used for branching code</li>
+				<li>A if/else is used for more advanced conditional logic checks</li>
+				<li>A switch is used for checking the value of one variable against many possible values.</li>
+				<li>It's usually used with a string or number</li>
+				<li>Has an optional "default" case that is similar to the "else" of an if/else structure.</li>
+			</ul>
+
+			<h2>Syntax / Anatomy</h2>
+<pre>
+switch(varname) {
+	case "Admin":
+		...
+		break;
+	case "Superuser":
+		...
+		break;
+	default:
+		...
+}
+</pre>
+
+			<h2>Fall through</h2>
+			<p>This syntax combines multiple cases into one code branch.</p>
+
+<p>Fall-through example:</p>
+<pre>
+switch(varname) {
+	case "Admin":
+	case "Superuser":
+		...
+		break;
+	case "User"
+		...
+		break;
+	default:
+		...
+}
+</pre>
+
+		</div>
+		
+		<div>
+
+			<div class="reference-links">
+				<h2>Quick Links</h2>
+				<ul>
+					<li>
+						<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch">MDN: Statements: switch</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+
+	</section>
+
+</main>
+
+</body>
+</html>

@@ -40,7 +40,21 @@
 
 
 			<h2>Notes</h2>
+			<h3>Event Listeners</h3>
+			<ol class="numbered">
+				<li>Event Listeners listen for a certain type of Event.</li>
+				<li>Event Listeners listen for that Event to be dispatched on a certain Element.</li>
+				<li>When that Event is dispatched, the Event Listener calls the callback function.</li>
+				<li>The callback function is passed the Event object as the first argument.</li>
+				<li>
+				<span class="gtk"></span>
+				The callback function for an Event Listener is commonly referred to as an "Event Handler".</li>
+			</ol>
 
+			<h3>Event Listeners Syntax</h3>
+			<code>Element.addEventListener('type', function);</code>
+			<p>In english, how this reads is:
+			Listen for this type of event to happen to that element, and when it does call this function.</p>
 
 			<h2>References</h2>
 			<ul>

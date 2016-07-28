@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objects - Topics - JSD2</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="../../css/jsd.css">
+	<link rel="shortcut icon" href="../../images/jsd-favicon.png">
+</head>
+<body>
+
+<header>
+	<h1><a href="../../index.html">JSD2</a>: <a href="../../topics.html">Topics</a>: Objects</h1>
+</header>
+
+<main>
+
+	<section class="two-column">
+
+		<div>
+			<h1>Objects</h1>
+
+			<h2>Objectives</h2>
+			<p>You should be comfortable with:</p>
+			<ol class="numbered">
+				<li>Creating an object</li>
+				<li>Creating properties on an object</li>
+				<li>Accessing an object's properties using dot notation or bracket notation</li>
+			</ol>
+
+
+			<h2>Notes</h2>
+			<p>Objects are composed of two things:</p>
+			<ol class="numbered">
+				<li>Properties</li>
+				<li>Functions (aka Methods)</li>
+			</ol>
+
+			<p>Anatomy of an object</p>
+			<p>Todo: image!</p>
+
+			<h3>Example</h3>
+<pre>
+var car = {
+	make: "ford",
+	model: "mustang",
+	year: 1964
+}
+</pre>
+
+			<h3>Object syntax</h3>
+			<ul class="bulleted">
+				<li>Each property is separated by a colon, then the value.</li>
+				<li>Properties are separated by a comma</li>
+				<li>Each property name (aka key) is a string</li>
+				<li>Each property value can be any type of object. EG: a string, number, array, object</li>
+			</ul>
+
+			<h2>Notes</h2>
+			<p>Objects can be categorized into three general buckets:</p>
+			<ol class="numbered">
+				<li>
+					<h3>Native JavaScript language objects</h3>
+					<p>These are objects that are part of the programming language itself. They would be the same whether you were running JavaScript in the client (browser) or on the server (node.js). These objects also that have similar counterparts in other programming languages (like swift, ruby, python, etc) Examples:
+					<ul class="bulleted">
+						<li>Array</li>
+						<li>Math</li>
+						<li>JSON</li>
+					</ul>
+				</li>
+				<li>
+					<h3>Host Environment objects</h3>
+					<p>These host objects are specific to the environment JavaScript is running in. Since we're running JavaScript in the browser, these are things like:</p>
+					<ul class="bulleted">
+						<li>Navigator</li>
+						<li>Window</li>
+						<li>Document (aka DOM)</li>
+						<li>Element</li>
+						<li>Event</li>
+					</ul>
+				</li>
+				<li>
+					<h3>User/data objects</h3>
+					<p>The last category of objects are the ones you create. Whereas Native & Host objects are types of things pre-defined by standards commitees, these are things you define yourself. Most commonly, these are to model data in real life. You pick the name, you pick the data model structure. Some examples:</p>
+					<ul class="bulleted">
+						<li>reservation</li>
+						<li>business</li>
+						<li>contact</li>
+						<li>task</li>
+					</ul>
+				</li>
+			</ol>
+
+		</div>
+		
+		<div>
+
+			<div class="reference-links">
+				<h2>Quick Links</h2>
+				<ul>
+					<li>
+						<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects">MDN: Standard built-in objects</a>
+					<li>
+					<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Creating_new_objects">
+						MDN: Creating new objects</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</section>
+
+</main>
+
+</body>
+</html>
