@@ -71,13 +71,20 @@
 							This is the function that will be called when the location is determined.
 						</li>
 						<li>
-							A Geolocation callback is always passed one argument, which is a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Position">Position object</a>.
+							A Geolocation callback is always passed one argument, which is a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Position">Position</a> object.
 						</li>
 						<li>
 							So that everyone names the callback variable the same, please name the one argument <code>position</code>.
 						</li>
 						<li>
-							At this point you must do some debugging to thoroughly understand the json structure of the Position object. You must find the latitude and longitude properties in the position object. And save those two into variables.
+							At this point you must do some debugging to thoroughly understand the json structure of the Position object. If you're not a very curious person, this is your time to practice. 
+
+							You must dig around in the Position object to find the latitude and longitude properties. And please when you do, save those two values into two new variables (to be passed to next step).
+						</li>
+						<li>
+						Tip:
+							The Position object has a property named <code>coords</code> that contains a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Coordinates">Coordinates</a> object. 
+						</li>
 					</ul>
 				</li>
 
@@ -106,6 +113,34 @@
 			<p>It *may* be helpful to do the last step first. Step 3 is just a <em>"give me some data and I'll create some DOM Elements"</em> kinda function. This is something we've already done and you can fake it and hardcode the two values for latitude and longitude to test it works first. Even by just calling it at the console and passing two values.</p>
 			<p>This might prove to be a rewarding chunk to knock out first.</p>
 
+
+			<h2>Next Steps</h2>
+			<p>Got that much done? Great! Now here are some more improvements to work on to refine your app:</p>
+			<ol>
+				<li>Rounding. Cut off a few of those bazillion decimal places and round the Lat/Long down to 4 decimals.</li>
+				<li>Better display. Display the cardinal direction (N,S,E,W) instead of positive/negative values (+/-). Oh, and add taht fancy degree symbol. 
+				<br>Example: Convert <code>-122.4018</code> into <code>122.4018° W</code></li>
+				<li>
+					Error handling. Not every request to your device for the location will be successful. When an error occurs, a different callback will be called. 
+
+					<p>Create a <code>geoError</code> callback function. 
+					It should receive one argument, name that argument <code>positionError</code>.</p>
+					<p>
+					And that function should just set the <code>innerHTML</code> of 
+					the <code>error</code> Element to be a concatenated string like this:
+
+					<pre>
+					Error: Unable to retrieve your location.
+					positionError.code: positionError.message
+					</pre>
+					</p>
+				</li>
+
+				<li>Make it update live as you move! So, the downside of the <code>getCurrentPosition()</code> method is that it only gets your position one time. What happens if you are moving (walking/driving) around? There's a better method to use. Research how the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition">watchPosition()</a> method works and refactor your code to use that instead of getCurrentPosition().
+				</li>
+				<li>Accuracy. Show the GPS accuracy to the user to let them know how accuration their location is. 
+				Dig around in that Position object and find the accuracy property. Don't forget the unit! (Geolocation API expresses accuracy in meters - feel free to convert) 
+			</ol>
 		</article>
 
 		<aside>
