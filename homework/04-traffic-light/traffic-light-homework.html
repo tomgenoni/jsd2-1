@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Traffic Light - Homework - JSD2</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="../../css/jsd.css">
+	<link rel="shortcut icon" href="../../images/jsd-favicon.png">
+</head>
+<body>
+
+<header>
+	<h1><a href="../../index.html">JSD2</a>: <a href="../../homework.html">Homework</a>: Traffic Light</h1>
+</header>
+
+<main>
+
+	<section>
+
+		<h1>Traffic Light</h1>
+
+		<p><a href="materials/traffic-light-starter-code.zip">Download the trafficLight-starter-code</a> to get started. </p>
+
+		<h2>Due:</h2>
+		<p>Wednesday, 8/3/2016 @ 6:30pm</p>
+
+		<h2>Overview</h2>
+		<ul class="bulleted">
+			<li>Your assignement is to make a working traffic light. By using the control buttons at the top of the page, the light should be able to be changed from red to green to yellow.</li>
+	
+			<li>Just as with the examples in class, you'll be adding event listeners to the buttons. There will be three corresponding event handler functions. What you have to figure out is how to "control the lights."</li>
+
+			<li><strong>The new concept for this homework assignment is changing class names on an Element.</strong> This is done using the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList">ClassList API</a>. The ClassList API is a pretty simple object that has methods to add, remove, and toggle CSS classes on an Element.</li>
+		</ul>
+
+		<h2>Task</h2>
+		<ol class="numbered">
+			<li>Review the HTML that is given. Really get a feeling for the structure of the DOM. Play around with the Elements tab in the web inspector.</li>
+			<li>Analyize the CSS that is given. Try to manually set the light color by adding a class to the <code>traffic-light</code> Element in the static html file and reloading the page. One by one, add the <code>stop</code>, <code>slow</code>, etc classes to the <code>traffic-light</code> in the HTML file, reload the page, and see what happens. <span style="color: magenta;">Super important to do this before you write even one line of code!</span></li>
+			<li>The JS file has already been linked for you, it's called trafficLight.js. In there, write the structure, events, and event handlers to make your traffic light come alive! 
+			</li>
+			<li>The Event Handler functions will have to make heavy use of <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList">ClassList API</a> to add and remove CSS classes from the traffic-light div.</li>
+			<li>Once that is complete, try to enable a 'caution' mode where the yellow light flashes. Hint: use a Timer.</li>
+		</ol>
+
+	</section>
+	<section class="two-column">
+
+		<div>
+			<h2>Given</h2>
+			<ul class="bulleted">
+				<li>The mockup image of a Traffic Light attached to this assignment.</li>
+				<li>All the HTML and CSS is done for you.</li>
+			</ul>
+
+			<h3>If you get stuck, remember the processes we've used in class:</h3>
+			<ul class="bulleted">
+				<li>Getting Elements with document.querySelector()</li>
+				<li>Saving Elements in variables with var using assignment (=)</li>
+				<li>Making an Element listen for a click Event with addEventListener()</li>
+				<li>Grouping together code with functions. Remember, to use an Event Handler function for each Event Listener.</li>
+				<li>New: Changing an Element CSS class using the ClassList API.</li>
+			</ul>
+			<h3>Don't stress</h3>
+			<p>There are many solutions. Run with whatever makes the most sense to you. Don't worry about the "best" way. Every class I end up changing up what I think is the best way. I look at my code from last time, and think: that's kinda weird, I could do better.</p>
+
+		</div>
+		<div>
+			<img src="materials/traffic-light-mockup.png" width="300">
+		</div>
+	</section>
+
+	<section>
+		<h2>Minimum Requirements</h2>
+		<p>Clicking "Stop" should make it red, "Slow" should make it yellow, and "Go" should make it green.</p>
+
+		<h2>Tiny Bonus</h2>
+		<p>Add the ability to flash the yellow light like a caution light. Everyeone should strive for this bonus. It's not to hard and shows off your skillz with Timers.</p>
+
+		<h2>Super Crazy Bonus</h2>
+		<p>Add a "run" button that automatically cycles through the red/green/yellow lights. Design the timing for each light. A typical light cycle is 120 seconds. But you may want to shorten that to like 12 for demo purposes.</p>
+
+	</section>		
+
+</main>
+
+<script>
+window.addEventListener('load', function() {
+	jsd.track('view_homework_02_madlibs');
+});
+</script>
+<script src="../../js/jsd.js"></script>
+</body>
+</html>
