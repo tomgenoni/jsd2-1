@@ -55,9 +55,3 @@ function createRestaurant(restaurant) {
 	li.appendChild(h2);
 	li.appendChild(p);
 }
-
-	
-
-
-
-

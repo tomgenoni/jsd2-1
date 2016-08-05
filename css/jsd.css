@@ -234,7 +234,10 @@ footer a:hover {
 /* ---------------------------------- */
 .homework {
 	width: 100%;
-	margin-top: 12px;
+}
+.homework thead th {
+	background: #222;
+	padding-top: 24px;
 }
 .homework tr:nth-child(even) {
 	background: #444444;
@@ -243,9 +246,18 @@ footer a:hover {
 .homework td {
 	padding: 4px 16px 4px 12px;
 	text-align: center;
+	white-space: nowrap;
 }
 .homework tr td:first-child {
 	text-align: left;
+}
+.homework img.github {
+	width: 16px;
+	margin: -3px 3px 0 0;
+	vertical-align: middle;
+}
+.homework td + td a {
+	padding: 0 20px;
 }
 
 
@@ -267,4 +279,10 @@ footer a:hover {
 .labs table th,
 .labs table td {
 	padding: 3px 12px 3px 6px;
+}
+
+
+.mockup {
+	box-shadow: 0 0 5px 2px #777777;
+	margin: 24px 0;
 }

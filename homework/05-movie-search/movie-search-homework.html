@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie Search - Homework - JSD2</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="../../css/jsd.css">
+	<link rel="shortcut icon" href="../../images/jsd-favicon.png">
+</head>
+<body>
+
+<header>
+	<h1><a href="../../index.html">JSD2</a>: <a href="../../homework.html">Homework</a>: Movie Search</h1>
+</header>
+
+<main>
+
+	<section class="two-column">
+
+		<div>
+
+			<h1>Movie Search</h1>
+
+			<p>Download the starter code: <a href="materials/movie-search-starter.zip">movie-search-starter.zip</a> to get started.</p>
+
+			<h2>Due:</h2>
+			<p>Wednesday, 8/10/2016 @ 6:30pm</p>
+
+			<h2>Overview</h2>
+			<p>You made it to Movie Search, the assignment that brings it all together: HTML, CSS, event handlers, AJAX, DOM manipulation, and arrays.</p>
+
+			<h2>Where do I get the movie search results from?</h2>
+
+			<p><a href="http://www.omdbapi.com">OMDB API</a>, a free service that serves up movie-related JSON content. You make search calls by simply going to: http://omdbapi.com/?s={query}. So, for example, if you want to search for "matrix" you'd visit http://omdbapi.com/?s=matrix.</p>
+
+			<p>The response comes back as a JSON string, which you may have to parse with JSON.parse() depending on how you decide to perform the HTTP request (jQuery will likely do it for you automatically). The array of movie search results live inside the Search property of the resulting object. So, for example, to get the name of the 2nd movie in the list, we'd write results.Search[1].Title. If the casing bothers you, this also works results["Search"][1]["Title"]. To loop through the results we'd write results.Search.forEach(doSomething), where doSomething is a function we define.</p>
+
+			<h2>How do I perform the HTTP GET request?</h2>
+
+			<p>You can include jQuery and use the $.getJSON() function, like a boss.</p>
+
+			<h2>This feels daunting, where do I even start?</h2>
+
+			<p>Add the HTML to list a couple movies just as an example of what you'll see when you do a real search. Doing this will make you familiar with the content you need to create with JS.</p>
+
+			<p>When it comes to JS, start with some pseudo-code. Give yourself small goals like simply writing to the console what's in the input box. You can also work backwards, writing the "display a movie" function first! Then open your console, call your function, pass it the right parameters, and see it appear on the screen. When the results come back from the server and it's time to put the movies on screen you'll already have that part done.</p>
+
+			<h2>Given</h2>
+			<ul class="bulleted">
+				<li>Docs on the <a href="http://www.omdbapi.com">OMDB API</a> website</li>
+			</ul>
+		</div>
+		<div>
+			<h2>Mockup</h2>
+
+			<img class="mockup" src="materials/movie-search-mockup.png" width="300">
+		</div>
+	</section>
+	
+
+</main>
+
+<script>
+window.addEventListener('load', function() {
+	jsd.track('view_homework_05_movie_search');
+});
+</script>
+<script src="../../js/jsd.js"></script>
+</body>
+</html>
