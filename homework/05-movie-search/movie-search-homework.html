@@ -19,45 +19,86 @@
 	<section class="two-column">
 
 		<div>
-
 			<h1>Movie Search</h1>
+			<p>Welcome to Movie Search! Your first API assignment. You'll be hitting the endpoints of the <a href="http://www.omdbapi.com">OMDB API</a> to get movie data in JSON format and then displaying it on the page.</p>
 
-			<p>Download the starter code: <a href="materials/movie-search-starter.zip">movie-search-starter.zip</a> to get started.</p>
+			<p>Movie Search brings together three skills we've been working on the last couple weeks: AJAX, Events, and DOM manipulation (adding new HTML Elements to the page). Additionally, it builds upon your fundamental understanding of how to loop over arrays and how to access an object's properties (using dot notation or bracket notation).</p>
 
-			<h2>Due:</h2>
-			<p>Wednesday, 8/10/2016 @ 6:30pm</p>
+			<h2>About the OMDB API</h2>
 
-			<h2>Overview</h2>
-			<p>You made it to Movie Search, the assignment that brings it all together: HTML, CSS, event handlers, AJAX, DOM manipulation, and arrays.</p>
+			<p><a href="http://www.omdbapi.com">OMDB API</a>, The Open Movie Database, is a free web service to obtain movie information. It's like an open-source version of IMDB. They have a great API that serves up data in JSON format for developers like you to build apps upon.</p>
 
-			<h2>Where do I get the movie search results from?</h2>
+			<p>The API has pretty solid <a href="http://www.omdbapi.com/#parameters">documentation</a>. There are two endpoints you need to grasp: 
+			<ol class="numbered">
+				<li>Search - search for a list of movies by passing the <code>s</code> parameter.</li>
+				<li>Details - get details on one movie. You can look it up by either the ID or title. Passing the <code>i</code> or <code>t</code> parameter, respectively.</li>
+			</ol>
 
-			<p><a href="http://www.omdbapi.com">OMDB API</a>, a free service that serves up movie-related JSON content. You make search calls by simply going to: http://omdbapi.com/?s={query}. So, for example, if you want to search for "matrix" you'd visit http://omdbapi.com/?s=matrix.</p>
+			<p>Using Postman, explore the API a bit before you even start to code. Make some search queries, then examine the API response to understand how they built their data model. Start out with a search request like <a href="http://omdbapi.com/?s=summer">http://omdbapi.com/?s=summer</a>. Then try a details request by id <a href="http://omdbapi.com/?i=tt2277860">http://omdbapi.com/?i=tt2277860</a> or by title <a href="http://omdbapi.com/?t=interstellar">http://omdbapi.com/?t=interstellar</a>.</p>
 
-			<p>The response comes back as a JSON string, which you may have to parse with JSON.parse() depending on how you decide to perform the HTTP request (jQuery will likely do it for you automatically). The array of movie search results live inside the Search property of the resulting object. So, for example, to get the name of the 2nd movie in the list, we'd write results.Search[1].Title. If the casing bothers you, this also works results["Search"][1]["Title"]. To loop through the results we'd write results.Search.forEach(doSomething), where doSomething is a function we define.</p>
-
-			<h2>How do I perform the HTTP GET request?</h2>
-
-			<p>You can include jQuery and use the $.getJSON() function, like a boss.</p>
-
-			<h2>This feels daunting, where do I even start?</h2>
-
-			<p>Add the HTML to list a couple movies just as an example of what you'll see when you do a real search. Doing this will make you familiar with the content you need to create with JS.</p>
-
-			<p>When it comes to JS, start with some pseudo-code. Give yourself small goals like simply writing to the console what's in the input box. You can also work backwards, writing the "display a movie" function first! Then open your console, call your function, pass it the right parameters, and see it appear on the screen. When the results come back from the server and it's time to put the movies on screen you'll already have that part done.</p>
+			<p>When you do start to code, <strong>use console.log statments often</strong> to log out the JSON data so you can see what you're working with. Or set a breakpoint. So, for example, to get the name of the 2nd movie in the list, you'd log something like: json.Search[1].Title. If this API's usage of title case for property name bothers you, then you can use bracket notation instead and log something like: json["Search"][1]["Title"].</p>
 
 			<h2>Given</h2>
 			<ul class="bulleted">
-				<li>Docs on the <a href="http://www.omdbapi.com">OMDB API</a> website</li>
+				<li>The starter code with all HTML & CSS done for you.</li>
+				<li>The <a href="../../labs/foodie/foodie.html">Foodie</a> opentable api app we did in class. Use your code from this as an example.</li>
+				<li>Docs on the <a href="http://www.omdbapi.com">OMDB API</a> website.</li>
+				<li>Note: Sample movie results are in the HTML starter code. This is just so you see an example of what the new html *should* look like. Remove all the hard coded stuff once you get the JS working.</li>
 			</ul>
+
+			<h2>Minimum Requirements</h2>
+			<ol class="numbered">
+				<li>Answer the seven questions in the starter code HTML. You can just type them in the html file. And hide them afterwards if you'd like.</li>
+				<li>Typing a name of a movie and hitting the return key will make an API request to search the OMDB API.</li>
+				<li>Search results are displayed below the form, as in the mockup screenshot</li>
+				<li>Clicking one of the movie search results will performs a second request to the details endpoint of the OMDB API. 
+				<li>The movie details, including the poster image, the plot description, and a link to IMDb, is revealed on the page above the list.</li>
+			</ol>
+
 		</div>
 		<div>
-			<h2>Mockup</h2>
 
-			<img class="mockup" src="materials/movie-search-mockup.png" width="300">
+			<h2>Due</h2>
+			<p>Wednesday, 8/10/2016 @ 6:30pm</p>
+
+			<h2>Starter code</h2>
+			<p>
+				<a href="materials/movie-search-starter.zip">movie-search-starter.zip</a>
+			</p>
+
+			<h2>Mockup</h2>
+			<img class="mockup" src="materials/movie-search-mockup-1.png" width="375">
+			<img class="mockup" src="materials/movie-search-mockup-2.png" width="375">
 		</div>
 	</section>
 	
+	<section>
+
+		<h2>Tips: making AJAX requests</h2>
+		<p>You're going to need to make an AJAX request to the API. It's recommended to include one of these JavaScript libraries in your project to make AJAX a ton easier for you. We've covered jQuery's getJSON. But feel free to try Reqwest as well.</p>
+		<ol class="numbered">
+			<li><a href="http://api.jquery.com/jquery.getjson/">jQuery.getJSON()</a></li>
+			<li><a href="https://github.com/ded/Reqwest">Reqwest</a> (Download js file here: <a href="../../vendor/reqwest.js.zip">reqwest.js.zip</a>)</li>
+		</ol>
+
+		<h2>The challenging part: getting the movie details</h2>
+
+		<p>The most challenging conceptual part of this assignment just might surprise you. Until this point in the course, you've been adding Event Listeners to Elements that were in the page source. And doing that at page load time. Now starts something a little different.</p>
+
+		<p>To get the movie details, you're going to have to listen for a click event on an element that <em>was not in the original html source of the page</em>. But, instead, an Element that was dynamically added to the page.</p>
+
+		<p>So, first hard thing: while you're creating a new Element, you must also add an Event Listener to it after creating it. Alternatively, you could use a new technique called <a href="https://davidwalsh.name/event-delegate">Event Delegation</a>. Event Delegation has some trade offs, but is generally the way to go and we'll be moving towards using it more in the future.</p>
+
+		<p>The second hard thing: figuring out which element was clicked on. Remember that every Event has a <code>.target</code> property that contains the Element object that the Event occured on. A popular technique among web developers is to stash away extra info about a data object as an attribute on an Element. And then, retrieve that info later. Usually you want to store some unique identifier for an object in an Element's ID attribute or in a <a href="http://html5doctor.com/html5-custom-data-attributes/">Data Attribute</a>. This can be read later by accessing the Element's ID or by using the Element's <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_data_attributes">dataset</a> property.</p>
+
+
+		<h2>Bonus: validation</h2>
+		<p>It's time to start thinking about making your apps more resilient! Have you noticed that not all movies have a poster? What value does the poster property have if the movie doesn't have a poster? How about if you checked for that and then did not add the &lt;img&gt; Element. Or added some default placeholder element.</p>
+		<p>Also, some error checking around the form would be nice so that it doesn't make the ajax call if the form is left empty.</p>
+
+		<h2>Creative Bonus</h2>
+		<p>Customize the movie details section with more content about the movie. Maybe add some more stuff like the actors, runtime, or imdb rating. Adjust the CSS as needed!</p>
+	</section>
 
 </main>
 

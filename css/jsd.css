@@ -73,6 +73,18 @@ ul {
 }
 
 
+/* Body Copy */
+/* ---------------------------------- */
+p + p,
+ol + p,
+ul + p {
+	margin-top: 12px;
+}
+ul,
+ol {
+	margin-top: 6px;
+}
+
 /* Layout */
 /* ---------------------------------- */
 html,
@@ -259,6 +271,10 @@ footer a:hover {
 .homework td + td a {
 	padding: 0 20px;
 }
+.mockup {
+	box-shadow: 0 0 5px 2px #777777;
+	margin: 24px 0;
+}
 
 
 /* Labs */
@@ -282,7 +298,12 @@ footer a:hover {
 }
 
 
-.mockup {
-	box-shadow: 0 0 5px 2px #777777;
-	margin: 24px 0;
+
+/* Code */
+/* ---------------------------------- */
+code {
+	background: #E3E3E3;
+	padding: 2px 6px;
+	border: 1px solid #DCDCDC;
+	border-radius: 2px;
 }
