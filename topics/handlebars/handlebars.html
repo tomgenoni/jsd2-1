@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Handlebars - Topics - JSD2</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="../../css/jsd.css">
+	<link rel="shortcut icon" href="../../images/jsd-favicon.png">
+</head>
+<body>
+
+<header>
+	<h1><a href="../../index.html">JSD2</a>: <a href="../../topics.html">Topics</a>: Handlebars</h1>
+</header>
+
+<main>
+
+	<section class="two-column">
+
+		<div>
+			<h1>Handlebars</h1>
+			<p>Handlebars is a template engine. It combines a template with a data source to create HTML.</p>
+			<p>For Javascript template systems, like Handlebars, that template is a <strong>string of HTML</strong> and the data source is a <strong>JSON object</strong>. The output is also a <strong>string of HTML</strong>, with the data properties from the JSON merged in.</p>
+
+			<p>
+				<img src="images/handlebars-overview.png">
+			</p>
+
+			<h2>Objectives</h2>
+			<p>You should be comfortable with:</p>
+			<ol class="numbered">
+				<li>Writing a template source, with merge tags, and putting it in an HTML page using the &lt;script&gt; tag</li>
+				<li>Getting the source from your html page, and, compiling it into a Handlebars template</li>
+				<li>Using Handlebars to create the HTML for one data object</li>
+				<li>Looping over an array of objects to create the HTML for each item in the array</li>
+			</ol>
+
+
+			<h2>Sending data to the template</h2>
+
+			<p>When sending data to a template system, there is a unique, text-based identifier that corresponds to the data source for each piece of data.</p>
+
+			<p>If you've ever worked with a mailing list newsletter, like a mail merge in Microsoft Office or an email campaign in MailChimp or Constant Contact, then you might be familiar with a concept called merge tags or merge fields. These are the labels that identify each piece of data, give it a name, and a location for where that data goes in the template.</p>
+			<p>Some examples of merge field names are: <code>first_name</code>, <code>membership_id</code>, or <code>postal_code</code>.</p>
+
+
+			<p>An example of an email template might start like this:</p>
+
+<div class="pre-wrap">
+<pre>
+Date: [date]
+Member ID: [membership_id]
+
+Applicant:
+[first_name] [last_name]
+[company]
+[street]
+[city], [state] [postal_code]
+
+Dear [first_name],
+    We would like to congratulate you on...
+</pre>
+</div>
+
+			<h2>Merge variables in Handlebars</h2>
+			<p>Every template language has come up with some clever syntax for putting the merge tag into the template. Here are some examples from other systems.</p>
+			<p>MailChimp: uses a star and a pipe around the merge tag.</p>
+
+<div class="pre-wrap">
+<pre>
+
+&lt;p&gt;Hi *|FIRST_NAME|*,&lt;/p&gt;
+&lt;p&gt;&lt;a href="*|PASSWORD_RESET_URL|*"&gt;Reset your password&lt;/a&gt; using this link.&lt;/p&gt;
+
+</pre>
+</div>
+
+			<p><br>MS Word: uses a double arrows.</p>
+<div class="pre-wrap">
+<pre>
+
+Dear &lt;&lt;FirstName,&gt;&gt;
+  In reference to case #&lt;&lt;FilingNumber&gt;&gt; we are writing to request the following additional...
+
+</pre>
+</div>
+
+<p>In Handlebars, the double curly brace syntax is used around a merge tag variable.</p>
+<div class="pre-wrap">
+<pre>
+
+&lt;div&gt;
+  &lt;h2&gt;Patent status&lt;/h2&gt;
+  &lt;p&gt;Filing date: {{filingDate}}&lt;/p&gt;
+  &lt;p&gt;Grant date: {{publicationDate}}&lt;/p&gt;
+&lt;/div&gt;
+
+</pre>
+</div>
+
+			<h2>Installation</h2>
+			<p>Handlebars a JavaScript library, so you link to it your html page the same as any other script. Make sure it's included before any of your own JS files.</p>
+
+<div class="pre-wrap">
+<pre>
+&lt;script src="js/handlebars.js"&gt;&lt;/script&gt;
+&lt;script src="js/myApp.js"&gt;&lt;/script&gt;
+</pre>
+</div>
+
+			<p>Like most popular open source JavaScript libraries, it is hosted for free for you on a CDN. You can either include a copy of the libary in your project and link to it locally (above) or link to the remote copy on the CDN (below).</p>
+
+<div class="pre-wrap">
+<pre>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"&gt;&lt;/script&gt;
+&lt;script src="js/myApp.js"&gt;&lt;/script&gt;
+</pre>
+</div>
+
+			<h2>Handlebars flow</h2>
+
+			<ol class="numbered">
+				<li>Write the source HTML Template (with merge variables) using a script tag</li>
+				<li>Compile the template into a function using Handlebars.compile. Compile returns a function.</li>
+				<li>Call this new function and pass a JSON object as the argument. The function returns the final HTML.</li>
+				<li>Insert this new final html into a DOM element.
+			</ol>
+
+		</div>
+		
+		<div>
+
+			<div class="pre-reading">
+				<h2>Pre-reading</h2>
+
+				<ol class="numbered">
+					<li>
+						<a href="https://www.sitepoint.com/a-beginners-guide-to-handlebars">https://www.sitepoint.com/a-beginners-guide-to-handlebars</a>
+						<ul class="bulleted">
+							<li>SitePoint - A Beginner’s Guide to Handlebars</li>
+						</ul>
+					</li>
+				</ol>
+			</div>
+		
+			<div class="videos">
+				<h3>Videos</h3>
+
+				<ol class="numbered">
+					<li>
+						<a href="https://www.youtube.com/watch?v=4HuAnM6b2d8">Derek Banas - Handlebars Tutorial</a>
+						<ul class="bulleted">
+							<li>37 minutes. So extensive.</li>
+						</ul>
+					</li>
+					<li>
+						<a href="https://www.youtube.com/watch?v=3zVYH16yogQ">Gaur Associates - Handlebars JavaScript Templates in 8 minutes</a>
+						<ul class="bulleted">
+							<li>Many examples including a single basic template, loops using 'each', and more.</li>
+						</ul>
+					</li>
+					<li>
+						<a href="https://www.youtube.com/watch?v=uFytR93-PDc">Chris Mather - Handlebars - How it works</a>
+						<ul class="bulleted">
+							<li>Super short, with just one basic example.</li>
+						</ul>
+					</li>
+				</ol>
+			</div>
+
+			<div class="reference-links">
+				<h2>Quick Links</h2>
+				<ul>
+					<li>
+						<a href="http://handlebarsjs.com/">Handlebars official documentation</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</section>
+
+</main>
+
+</body>
+</html>
